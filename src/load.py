@@ -5,7 +5,7 @@ from LoadExperts import ModelConfig, LoadExperts
 import time
 
 MODEL_PATH = "/work/morrisliu07/gpt-oss-20b-split/"
-GPU_DEVICE = "cuda:0"
+GPU_DEVICE = "cuda:1"
 
 def print_gpu_usage(tag=""):
     device = torch.device(GPU_DEVICE)
@@ -50,7 +50,7 @@ prompt = tokenizer.apply_chat_template(
 
 inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 start_time = time.time()
-outputs = model.generate(**inputs, max_new_tokens=50)
+outputs = model.generate(**inputs, max_new_tokens=150)
 print(f"Generation Time: {(time.time() - start_time) / 60:.2f} minutes")
 print("Model Output:", tokenizer.decode(outputs[0], skip_special_tokens=True))
 
