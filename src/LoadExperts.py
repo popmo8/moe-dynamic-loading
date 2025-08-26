@@ -7,7 +7,7 @@ import torch
 import torch.distributed as dist
 
 def print_gpu_usage(tag=""):
-    device = torch.device("cuda:1")
+    device = torch.device("cuda:0")
     allocated = torch.cuda.memory_allocated(device) / (1024 ** 3)  # GB
     reserved = torch.cuda.memory_reserved(device) / (1024 ** 3)    # GB
     print(f"[{tag}] GPU memory allocated: {allocated:.3f} GB, reserved: {reserved:.3f} GB")

@@ -5,9 +5,9 @@ from transformers import AutoModelForCausalLM
 
 # Hyper Parameters for saving model module weights
 MODEL_ID = "openai/gpt-oss-20b"
-MODE = "split"    # normal: 正常模式, split: 進一步將單一experts檔案拆分成多個檔案
+MODE = "normal"    # normal: 正常模式, split: 進一步將單一experts檔案拆分成多個檔案
 NUM_EXPERTS = 32
-MODEL_PATH = "/work/morrisliu07/gpt-oss-20b-split"
+MODEL_PATH = "/work/u8934334/gpt-oss-20b-split"
 
 # 載入模型
 model = AutoModelForCausalLM.from_pretrained(MODEL_ID, torch_dtype=torch.bfloat16)

@@ -1,0 +1,288 @@
+========================================================
+Job Started at Mon Aug 25 21:29:23 CST 2025
+Job is running on node: hgpn17
+========================================================
+[After initialize model skeleton] GPU memory allocated: 0.000 GB, reserved: 0.000 GB
+Model Initial Structure:
+GptOssForCausalLM(
+  (model): GptOssModel(
+    (embed_tokens): Embedding(201088, 2880, padding_idx=199999)
+    (layers): ModuleList(
+      (0-23): 24 x GptOssDecoderLayer(
+        (self_attn): GptOssAttention(
+          (q_proj): Linear(in_features=2880, out_features=4096, bias=True)
+          (k_proj): Linear(in_features=2880, out_features=512, bias=True)
+          (v_proj): Linear(in_features=2880, out_features=512, bias=True)
+          (o_proj): Linear(in_features=4096, out_features=2880, bias=True)
+        )
+        (mlp): GptOssMLP(
+          (router): GptOssTopKRouter()
+          (experts): GptOssExperts()
+        )
+        (input_layernorm): GptOssRMSNorm((2880,), eps=1e-05)
+        (post_attention_layernorm): GptOssRMSNorm((2880,), eps=1e-05)
+      )
+    )
+    (norm): GptOssRMSNorm((2880,), eps=1e-05)
+    (rotary_emb): GptOssRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=2880, out_features=201088, bias=False)
+)
+Loaded model.embed_tokens into the model.
+Loaded model.layers.0.self_attn.q_proj into the model.
+Loaded model.layers.0.self_attn.k_proj into the model.
+Loaded model.layers.0.self_attn.v_proj into the model.
+Loaded model.layers.0.self_attn.o_proj into the model.
+Loaded model.layers.0.mlp.experts into the model.
+Loaded model.layers.0.input_layernorm into the model.
+Loaded model.layers.0.post_attention_layernorm into the model.
+Loaded model.layers.1.self_attn.q_proj into the model.
+Loaded model.layers.1.self_attn.k_proj into the model.
+Loaded model.layers.1.self_attn.v_proj into the model.
+Loaded model.layers.1.self_attn.o_proj into the model.
+Loaded model.layers.1.mlp.experts into the model.
+Loaded model.layers.1.input_layernorm into the model.
+Loaded model.layers.1.post_attention_layernorm into the model.
+Loaded model.layers.2.self_attn.q_proj into the model.
+Loaded model.layers.2.self_attn.k_proj into the model.
+Loaded model.layers.2.self_attn.v_proj into the model.
+Loaded model.layers.2.self_attn.o_proj into the model.
+Loaded model.layers.2.mlp.experts into the model.
+Loaded model.layers.2.input_layernorm into the model.
+Loaded model.layers.2.post_attention_layernorm into the model.
+Loaded model.layers.3.self_attn.q_proj into the model.
+Loaded model.layers.3.self_attn.k_proj into the model.
+Loaded model.layers.3.self_attn.v_proj into the model.
+Loaded model.layers.3.self_attn.o_proj into the model.
+Loaded model.layers.3.mlp.experts into the model.
+Loaded model.layers.3.input_layernorm into the model.
+Loaded model.layers.3.post_attention_layernorm into the model.
+Loaded model.layers.4.self_attn.q_proj into the model.
+Loaded model.layers.4.self_attn.k_proj into the model.
+Loaded model.layers.4.self_attn.v_proj into the model.
+Loaded model.layers.4.self_attn.o_proj into the model.
+Loaded model.layers.4.mlp.experts into the model.
+Loaded model.layers.4.input_layernorm into the model.
+Loaded model.layers.4.post_attention_layernorm into the model.
+Loaded model.layers.5.self_attn.q_proj into the model.
+Loaded model.layers.5.self_attn.k_proj into the model.
+Loaded model.layers.5.self_attn.v_proj into the model.
+Loaded model.layers.5.self_attn.o_proj into the model.
+Loaded model.layers.5.mlp.experts into the model.
+Loaded model.layers.5.input_layernorm into the model.
+Loaded model.layers.5.post_attention_layernorm into the model.
+Loaded model.layers.6.self_attn.q_proj into the model.
+Loaded model.layers.6.self_attn.k_proj into the model.
+Loaded model.layers.6.self_attn.v_proj into the model.
+Loaded model.layers.6.self_attn.o_proj into the model.
+Loaded model.layers.6.mlp.experts into the model.
+Loaded model.layers.6.input_layernorm into the model.
+Loaded model.layers.6.post_attention_layernorm into the model.
+Loaded model.layers.7.self_attn.q_proj into the model.
+Loaded model.layers.7.self_attn.k_proj into the model.
+Loaded model.layers.7.self_attn.v_proj into the model.
+Loaded model.layers.7.self_attn.o_proj into the model.
+Loaded model.layers.7.mlp.experts into the model.
+Loaded model.layers.7.input_layernorm into the model.
+Loaded model.layers.7.post_attention_layernorm into the model.
+Loaded model.layers.8.self_attn.q_proj into the model.
+Loaded model.layers.8.self_attn.k_proj into the model.
+Loaded model.layers.8.self_attn.v_proj into the model.
+Loaded model.layers.8.self_attn.o_proj into the model.
+Loaded model.layers.8.mlp.experts into the model.
+Loaded model.layers.8.input_layernorm into the model.
+Loaded model.layers.8.post_attention_layernorm into the model.
+Loaded model.layers.9.self_attn.q_proj into the model.
+Loaded model.layers.9.self_attn.k_proj into the model.
+Loaded model.layers.9.self_attn.v_proj into the model.
+Loaded model.layers.9.self_attn.o_proj into the model.
+Loaded model.layers.9.mlp.experts into the model.
+Loaded model.layers.9.input_layernorm into the model.
+Loaded model.layers.9.post_attention_layernorm into the model.
+Loaded model.layers.10.self_attn.q_proj into the model.
+Loaded model.layers.10.self_attn.k_proj into the model.
+Loaded model.layers.10.self_attn.v_proj into the model.
+Loaded model.layers.10.self_attn.o_proj into the model.
+Loaded model.layers.10.mlp.experts into the model.
+Loaded model.layers.10.input_layernorm into the model.
+Loaded model.layers.10.post_attention_layernorm into the model.
+Loaded model.layers.11.self_attn.q_proj into the model.
+Loaded model.layers.11.self_attn.k_proj into the model.
+Loaded model.layers.11.self_attn.v_proj into the model.
+Loaded model.layers.11.self_attn.o_proj into the model.
+Loaded model.layers.11.mlp.experts into the model.
+Loaded model.layers.11.input_layernorm into the model.
+Loaded model.layers.11.post_attention_layernorm into the model.
+Loaded model.layers.12.self_attn.q_proj into the model.
+Loaded model.layers.12.self_attn.k_proj into the model.
+Loaded model.layers.12.self_attn.v_proj into the model.
+Loaded model.layers.12.self_attn.o_proj into the model.
+Loaded model.layers.12.mlp.experts into the model.
+Loaded model.layers.12.input_layernorm into the model.
+Loaded model.layers.12.post_attention_layernorm into the model.
+Loaded model.layers.13.self_attn.q_proj into the model.
+Loaded model.layers.13.self_attn.k_proj into the model.
+Loaded model.layers.13.self_attn.v_proj into the model.
+Loaded model.layers.13.self_attn.o_proj into the model.
+Loaded model.layers.13.mlp.experts into the model.
+Loaded model.layers.13.input_layernorm into the model.
+Loaded model.layers.13.post_attention_layernorm into the model.
+Loaded model.layers.14.self_attn.q_proj into the model.
+Loaded model.layers.14.self_attn.k_proj into the model.
+Loaded model.layers.14.self_attn.v_proj into the model.
+Loaded model.layers.14.self_attn.o_proj into the model.
+Loaded model.layers.14.mlp.experts into the model.
+Loaded model.layers.14.input_layernorm into the model.
+Loaded model.layers.14.post_attention_layernorm into the model.
+Loaded model.layers.15.self_attn.q_proj into the model.
+Loaded model.layers.15.self_attn.k_proj into the model.
+Loaded model.layers.15.self_attn.v_proj into the model.
+Loaded model.layers.15.self_attn.o_proj into the model.
+Loaded model.layers.15.mlp.experts into the model.
+Loaded model.layers.15.input_layernorm into the model.
+Loaded model.layers.15.post_attention_layernorm into the model.
+Loaded model.layers.16.self_attn.q_proj into the model.
+Loaded model.layers.16.self_attn.k_proj into the model.
+Loaded model.layers.16.self_attn.v_proj into the model.
+Loaded model.layers.16.self_attn.o_proj into the model.
+Loaded model.layers.16.mlp.experts into the model.
+Loaded model.layers.16.input_layernorm into the model.
+Loaded model.layers.16.post_attention_layernorm into the model.
+Loaded model.layers.17.self_attn.q_proj into the model.
+Loaded model.layers.17.self_attn.k_proj into the model.
+Loaded model.layers.17.self_attn.v_proj into the model.
+Loaded model.layers.17.self_attn.o_proj into the model.
+Loaded model.layers.17.mlp.experts into the model.
+Loaded model.layers.17.input_layernorm into the model.
+Loaded model.layers.17.post_attention_layernorm into the model.
+Loaded model.layers.18.self_attn.q_proj into the model.
+Loaded model.layers.18.self_attn.k_proj into the model.
+Loaded model.layers.18.self_attn.v_proj into the model.
+Loaded model.layers.18.self_attn.o_proj into the model.
+Loaded model.layers.18.mlp.experts into the model.
+Loaded model.layers.18.input_layernorm into the model.
+Loaded model.layers.18.post_attention_layernorm into the model.
+Loaded model.layers.19.self_attn.q_proj into the model.
+Loaded model.layers.19.self_attn.k_proj into the model.
+Loaded model.layers.19.self_attn.v_proj into the model.
+Loaded model.layers.19.self_attn.o_proj into the model.
+Loaded model.layers.19.mlp.experts into the model.
+Loaded model.layers.19.input_layernorm into the model.
+Loaded model.layers.19.post_attention_layernorm into the model.
+Loaded model.layers.20.self_attn.q_proj into the model.
+Loaded model.layers.20.self_attn.k_proj into the model.
+Loaded model.layers.20.self_attn.v_proj into the model.
+Loaded model.layers.20.self_attn.o_proj into the model.
+Loaded model.layers.20.mlp.experts into the model.
+Loaded model.layers.20.input_layernorm into the model.
+Loaded model.layers.20.post_attention_layernorm into the model.
+Loaded model.layers.21.self_attn.q_proj into the model.
+Loaded model.layers.21.self_attn.k_proj into the model.
+Loaded model.layers.21.self_attn.v_proj into the model.
+Loaded model.layers.21.self_attn.o_proj into the model.
+Loaded model.layers.21.mlp.experts into the model.
+Loaded model.layers.21.input_layernorm into the model.
+Loaded model.layers.21.post_attention_layernorm into the model.
+Loaded model.layers.22.self_attn.q_proj into the model.
+Loaded model.layers.22.self_attn.k_proj into the model.
+Loaded model.layers.22.self_attn.v_proj into the model.
+Loaded model.layers.22.self_attn.o_proj into the model.
+Loaded model.layers.22.mlp.experts into the model.
+Loaded model.layers.22.input_layernorm into the model.
+Loaded model.layers.22.post_attention_layernorm into the model.
+Loaded model.layers.23.self_attn.q_proj into the model.
+Loaded model.layers.23.self_attn.k_proj into the model.
+Loaded model.layers.23.self_attn.v_proj into the model.
+Loaded model.layers.23.self_attn.o_proj into the model.
+Loaded model.layers.23.mlp.experts into the model.
+Loaded model.layers.23.input_layernorm into the model.
+Loaded model.layers.23.post_attention_layernorm into the model.
+Loaded model.norm into the model.
+Loaded model.rotary_emb into the model.
+Loaded lm_head into the model.
+[After loading non-mlp layers] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+[After loading layer 0 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 0 router loaded finished ===================
+[After loading layer 1 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 1 router loaded finished ===================
+[After loading layer 2 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 2 router loaded finished ===================
+[After loading layer 3 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 3 router loaded finished ===================
+[After loading layer 4 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 4 router loaded finished ===================
+[After loading layer 5 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 5 router loaded finished ===================
+[After loading layer 6 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 6 router loaded finished ===================
+[After loading layer 7 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 7 router loaded finished ===================
+[After loading layer 8 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 8 router loaded finished ===================
+[After loading layer 9 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 9 router loaded finished ===================
+[After loading layer 10 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 10 router loaded finished ===================
+[After loading layer 11 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 11 router loaded finished ===================
+[After loading layer 12 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 12 router loaded finished ===================
+[After loading layer 13 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 13 router loaded finished ===================
+[After loading layer 14 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 14 router loaded finished ===================
+[After loading layer 15 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 15 router loaded finished ===================
+[After loading layer 16 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 16 router loaded finished ===================
+[After loading layer 17 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 17 router loaded finished ===================
+[After loading layer 18 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 18 router loaded finished ===================
+[After loading layer 19 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 19 router loaded finished ===================
+[After loading layer 20 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 20 router loaded finished ===================
+[After loading layer 21 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 21 router loaded finished ===================
+[After loading layer 22 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 22 router loaded finished ===================
+[After loading layer 23 router] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+================ Layer 23 router loaded finished ===================
+[After replacing router layers] GPU memory allocated: 1.079 GB, reserved: 2.098 GB
+Model Structure After Replacement:
+GptOssForCausalLM(
+  (model): GptOssModel(
+    (embed_tokens): Embedding(201088, 2880, padding_idx=199999)
+    (layers): ModuleList(
+      (0-23): 24 x GptOssDecoderLayer(
+        (self_attn): GptOssAttention(
+          (q_proj): Linear(in_features=2880, out_features=4096, bias=True)
+          (k_proj): Linear(in_features=2880, out_features=512, bias=True)
+          (v_proj): Linear(in_features=2880, out_features=512, bias=True)
+          (o_proj): Linear(in_features=4096, out_features=2880, bias=True)
+        )
+        (mlp): GptOssMLP(
+          (router): LoadRouter()
+          (experts): GptOssExperts()
+        )
+        (input_layernorm): GptOssRMSNorm((2880,), eps=1e-05)
+        (post_attention_layernorm): GptOssRMSNorm((2880,), eps=1e-05)
+      )
+    )
+    (norm): GptOssRMSNorm((2880,), eps=1e-05)
+    (rotary_emb): GptOssRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=2880, out_features=201088, bias=False)
+)
+Generation Time: 6.93 minutes
+Model Output: systemYou are ChatGPT, a large language model trained by OpenAI.
+Knowledge cutoff: 2024-06
+Current date: 2025-08-25
+
+Reasoning: medium
+
+# Valid channels: analysis, commentary, final. Channel must be included for every message.userRepeat after me: "My name is Morris."assistantanalysisThe assistant must produce a response that repeats after me: "My name is Morris." The assistant must output the repeated phrase. The assistant must output the phrase: "My name is Morris." The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the repeated phrase. The assistant must output the
+========================================================
+Job Finished at Mon Aug 25 21:38:45 CST 2025
+========================================================

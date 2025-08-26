@@ -8,7 +8,7 @@ import torch.nn.functional as F
 import torch.distributed as dist
 
 def print_gpu_usage(tag=""):
-    device = torch.device("cuda:1")
+    device = torch.device("cuda:0")
     allocated = torch.cuda.memory_allocated(device) / (1024 ** 3)  # GB
     reserved = torch.cuda.memory_reserved(device) / (1024 ** 3)    # GB
     print(f"[{tag}] GPU memory allocated: {allocated:.3f} GB, reserved: {reserved:.3f} GB")
@@ -33,22 +33,26 @@ class ModelConfig:
     rope_ntk_beta: float = 32.0
 
 class LoadRouter(nn.Module):
-    def __init__(self, config, model_path: str, layer_idx: int, top_k: int, experts_to_select: int):
+    def __init__(self, config, device: torch.device, model_path: str, layer_idx: int, top_k: int, experts_to_select: int):
         super().__init__()
         self.top_k = top_k
         self.random = experts_to_select
         self.num_experts = config.num_experts
         self.hidden_dim = config.hidden_size
+        # Customized parameters
+        self.device = device
         self.model_path = model_path
         self.layer_idx = layer_idx
 
         router_params = torch.load(f"{self.model_path}/layers/{self.layer_idx}/mlp/router.pt")
         self.weight = nn.Parameter(router_params['weight'])
         self.bias = nn.Parameter(router_params['bias'])
-        print_gpu_usage("After loading all expert weights")
+        print_gpu_usage(f"After loading layer {self.layer_idx} router")
+        print(f"================ Layer {self.layer_idx} router loaded finished ===================")
         
     def forward(self, hidden_states: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
         hidden_states = hidden_states.reshape(-1, self.hidden_dim)
+        hidden_states = hidden_states.to(self.weight.dtype)
         router_logits = F.linear(hidden_states, self.weight, self.bias)
         router_top_values, router_top_indices = torch.topk(router_logits, self.top_k, dim=-1)
 
